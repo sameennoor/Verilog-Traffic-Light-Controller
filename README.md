@@ -26,13 +26,21 @@ The controller uses timer-based state transitions and latches pedestrian request
 2. B_red, B_yellow, B_green
 3. Ped_green
 # 🔄 FSM States
-## | State | Description
-| :--- | :--- 
-| A_G	| Road A Green, Road B Red
-| A_Y	| Road A Yellow, Road B Red
-| B_G	| Road B Green, Road A Red
-| B_Y	| Road B Yellow, Road A Red
-| PED	| Pedestrian Crossing Mode
+## 1. A_G
+Road A = Green
+Road B = Red
+## 2.A_Y
+Road A = Yellow
+Road B = Red
+## 3. B_G
+Road B = Green
+Road A = Red
+## 4. B_Y
+Road B = Yellow
+Road A = Red
+## 5.PED
+Both roads = Red
+Pedestrian signal = Green
 # 🚶 Pedestrian Request Handling
 1. Pedestrian requests are stored using a latch signal
 2. Requests remain active until served
@@ -45,8 +53,9 @@ The controller uses timer-based state transitions and latches pedestrian request
 - Timer increments on each clock cycle
 - State changes occur after predefined timing interval
 # 📂 Project Files
-traffic_light.v
-traffic_light_tb.v
+ComputerArchitectureCodeFiles/
+├── traffic_light_controller.v
+├── testbench.v
 # 💻 Technologies Used
 - Verilog HDL
 - FSM Design Methodology
