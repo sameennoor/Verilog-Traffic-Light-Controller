@@ -54,7 +54,9 @@ Pedestrian signal = Green
 - State changes occur after predefined timing interval
 # 📂 Project Files
 ComputerArchitectureCodeFiles/
+
 ├── traffic_light_controller.v
+
 ├── testbench.v
 # 💻 Technologies Used
 - Verilog HDL
